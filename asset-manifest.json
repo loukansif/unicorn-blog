@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/unicorn-blog/static/css/main.0a8a6a50.css",
+    "main.js": "/unicorn-blog/static/js/main.0bf1e72a.js",
+    "static/js/787.75afbe99.chunk.js": "/unicorn-blog/static/js/787.75afbe99.chunk.js",
+    "index.html": "/unicorn-blog/index.html",
+    "main.0a8a6a50.css.map": "/unicorn-blog/static/css/main.0a8a6a50.css.map",
+    "main.0bf1e72a.js.map": "/unicorn-blog/static/js/main.0bf1e72a.js.map",
+    "787.75afbe99.chunk.js.map": "/unicorn-blog/static/js/787.75afbe99.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a8a6a50.css",
+    "static/js/main.0bf1e72a.js"
+  ]
+}
