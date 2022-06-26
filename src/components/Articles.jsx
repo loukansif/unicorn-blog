@@ -4,12 +4,12 @@ import Filter from "./Filter";
 
 let posts = [];
 const Articles = () => {
-const [articles, setArticles] = useState([]);
-const [search, setSearch] = useState("");
+  const [articles, setArticles] = useState([]);
+  const [search, setSearch] = useState("");
 
-const handleCallback = (childData) => {
-  setSearch(childData)
-}
+  const handleCallback = (childData) => {
+    setSearch(childData);
+  };
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -26,24 +26,24 @@ const handleCallback = (childData) => {
   let count = 0;
   return (
     <div className="Articles">
-      {/* <Filter parentCallback={handleCallback} /> */}
+      <Filter parentCallback={handleCallback} />
       {posts.map(({ id, title, body }) => {
-        if (count === 20) {
-          return null;
+        if (title.indexOf(search) !== -1) {
+          if (count === 20) {
+            return null;
+          }
+          count++;
+          return (
+            <div className="Article" key={id}>
+              <h4>{title}</h4>
+              <p>
+                {body.substring(0, 60)}...{" "}
+                <Link to={"/" + id}>afficher la suite</Link>
+              </p>
+            </div>
+          );
         }
-        count++;
-        return (
-          <div className="Article" key={id}>
-            <h4>{title}</h4>
-            <p>
-              {body.substring(0, 60)}...{" "}
-              <Link to={"/" + id}>afficher la suite</Link>
-            </p>
-          </div>
-        );
-       }
-       )
-      }
+      })}
     </div>
   );
 };

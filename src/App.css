@@ -81,12 +81,33 @@
   box-shadow: 8px 8px 12px #aaa;
 }
 
+fieldset input{
+  margin-bottom: 10px;
+}
+
+fieldset td{  
+  vertical-align: top;
+}
+
 .send-btn {
   background-color: #6059bd;
   color: white;
   font-size: 16px;
   padding: 8px;
   margin-top: 10px;
+}
+
+.filter-btn {
+  background-color: #6059bd;
+  color: white;
+  margin: 10px;
+  font-size: 19px;
+  border-radius: 6px;
+}
+
+.filterInput {
+  font-size: 19px;
+  border-radius: 6px;
 }
 
 .Comments {
@@ -96,4 +117,8 @@
   padding: 0 30px 20px;
   border-radius: 15px;
   text-align: justify;
+}
+
+label {
+  margin-right: 5px;
 }
